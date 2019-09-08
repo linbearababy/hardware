@@ -1,0 +1,171 @@
+What are the differences between a compiler, an interpreter and an assembler? Provide examples.
+(https://www.quora.com/What-are-the-differences-between-a-compiler-an-interpreter-and-an-assembler-Provide-examples)
+
+Compiler : It's a computer program(s) that transforms source code written in a programming language into machine language that is the target language which usually has a binary form known as object code.
+
+Interpreter : It translates high level instructions into an intermediate form, it translates the code into the intermediate form line by line an caries out specific actions.
+
+Assembler : It is a program that takes basic computer instruction(s) and converts then into a pattern of bits that the computer's processor can use to perform it's basic operations. The language used to program the assembler is called assembly language.
+
+
+1. 一些术语
+机器码：machine code == 机器指令：machine instruction == 指令instruction
+
+汇编语言：assembly
+
+汇编器：assembler
+
+高级语言：high-level language
+
+编译器：compiler
+
+ 
+
+2. 编译器和汇编器的区别
+机器码
+机器码即一条条的指令，可以被CPU处理器所识别的语言，CPU可以执行对应的指令，实现相应的功能。
+
+不论是编译器还是汇编器，最终生成的都是机器码。
+
+汇编语言
+汇编器产生机器码，指的是将汇编语言已编译成机器码。
+
+汇编语言中的每一个命令，一般情况下，都对应着一个，可以被CPU所识别的，机器码中的，机器指令。
+
+高级语言
+编译器，将高级语言编译成机器码。
+
+绝大多数的高级语言，比如C，C++，Java等，的命令，即高级语言写出来的语句，和机器语言都没有一一对应的关系，一般来说，一条高级语言的语句或几条语句所组成的代码段，都对应着（更多）多条机器码。
+
+硬件抽象层
+硬件抽象层是一种技术，将底层硬件细节抽象隐藏出来，以方便上层软件编程。
+
+汇编语言中，一般不存在硬件抽象层的概念，因为其本身语句，就接近于硬件指令，是用来直接操作硬件的。
+
+而被编译器所编译后的高级语言，会很大程度地涉及到硬件抽象层。
+
+汇编器的优势和劣势
+由于汇编语言本身和指令就基本是一一对应的关系，所以用汇编器将汇编代码编译所生成的可执行代码（指令）的效率，比高级语言被编译器最终编译生成的可执行代码的效率，要高很多。
+
+所以，当程序的性能作为最重要的考量的时候，比如在图像处理方面，或者是硬件资源有限的情况下，倾向于用汇编语言，以实现代码运行更高效，占用资源更少的效果。
+
+汇编语言的劣势是，不容易使用，难学，难用。
+
+编译器的优势和劣势
+在绝大多说情况下，在这点很小的性能的提升方面的优势，不足够补偿其在难学难用方面的劣势，此时，
+
+往往使用高级语言，比如C，C++，Java等。高级语言，更容易使用，更容易用来描述更加复杂的上层逻辑等。
+
+ 
+
+3. 总结
+汇编器 vs 编译器
+ 	汇编器	编译器
+输入文件	汇编（源）代码	高级语言（C/C++/Java/…的源）代码
+输出文件	机器码（指令）	机器码（指令）
+是否有代码优化功能	一般没有（一般也不需要，因为只是涉及到将汇编代码直接转换/翻译为机器码）	一般都包含代码优化（优化代码，以提高运行效率）
+ 
+
+汇编语言 vs 高级语言
+ 	汇编语言(不同CPU对应不同的自己的汇编语言和机器语言)	高级语言(C/C++/Java/…)
+学习和使用的难易度	难	相对容易
+和机器指令的一一对应程度	基本一一对应	一条高级语言往往对应着多条机器指令
+代码执行效率	极高	相对汇编来说较低
+
+https://www.crifan.com/assembler_vs_compiler_assembly_vs_high_level_language/
+
+Vacuum Tubes and Transistors Compared
+
+
+Transistors vs. Tubes – Brief Feature Comparison, adapted from IEEE & Eric Barbour’s 1998 “Cool Sound of Tubes” article.
+
+https://www.effectrode.com/knowledge-base/vacuum-tubes-and-transistors-compared/
+
+
+Vacuum Tubes: Advantages
+Superior sound quality.
+Highly linear without negative feedback, especially small-signal types.
+Smooth clipping is widely considered more musical than transistors.
+Tolerant of large overloads and voltage spikes.
+Characteristics highly independent of temperature, greatly simplifying biasing.
+Wider dynamic range than transistors circuits, due to higher operating voltages and overload tolerance.
+Device capacitances vary only slightly with signal voltages (Miller effect).
+Capacitive coupling can be done with small, high-quality film capacitors, due to inherently high-impedances of tube ciruits.
+Circuit designs tend to be simpler than transistorized equivalents, which are greatly complicated by the need to linearize intrinsically non-linear transistors.
+Operation is usually in Class A or Class AB, minimizing crossover notch distortion.
+Output transformer in power amp protects speaker from DC voltage due to malfunction and protects tubes from shorts and blunts back-emf spikes from speaker.
+Tubes can be relatively easily replaced by user.
+Vacuum Tubes: Disadvantages
+Bulky, hence less suitable for portable products.
+Higher operating voltages generally required.
+High power consumption; needs heater supply that generates waste heat and yields lower efficiency, notably for small-signal circuits.
+Glass tubes are fragile, compared to metal transistors.
+Sometimes more prone to microphonics than transistors, depending upon circuit and device.
+Cathode electron-emitting materials are used up in operation.
+High-impedance devices that need impedance matching transformer for low-impedance loads, like speakers; however, the magnetic cushion provided by an output transformer prevents the output tubes from blowing up.
+Sometimes higher cost than equivalently powered transistors.
+Transistors: Advantages
+Usually lower cost and smaller than tubes, especially in small-signal circuits.
+Can be combined in the millions on one cheap die to make an integrated circuit, whereas tubes are limited to at most three functional units per glass bulb.
+Lower power consumption, less waste heat, and high efficiency than equivalent tubes, especially in small-signal circuits.
+Can operate on lower-voltage supplies for greater safety, lower costs, tighter clearances.
+Matching transformers not required for low-impedance loads.
+Usually more physical ruggedness than tubes (depends upon construction).
+Transistors: Disadvantages
+Tendency toward higher distortion than equivalent tubed circuits.
+Complex circuits and considerable negative feedback required for low distortion.
+Sharp clipping, in a manner widely considered non-musical, due to considerable negative feedback commonly used. Does not gracefully roll-off or gently compress; instead, cuts off sharply, suddenly and abruptly with extremely hard edge.
+Device capacitances tend to vary wildly with applied voltages (Miller effect).
+Large unit-to-unit manufacturing tolerances and unreliable variations in key parameters, such as gain and threshold voltage.
+Stored-charge effects add signal delay, which complicates high-frequency and feedback design.
+Device parameters vary considerably with temperature, complicating biasing and increasing likelihood of thermal runaway, hotspots and unreproducible behavior.
+Cooling is less efficient than with tubes, because lower operating temperature is required for reliability. Tubes prefer hot; transistors do not. Massive, expensive and unwieldy heat sinks are always required for power transistors, yet they are not always effective (power output transistors still blow up; whereas, tubes fade down gracefully over time with warning and usually without catatrophic results).
+Power MOSFETs have high input capacitances that vary with voltage, complicating driver circuitry.
+Class B totem-pole circuits are common, which cause severe crossover distortion, or else necessitate huge amounts of negative feedback to correct. This “measures well” for steady-state signals, but it completely “sucks the life out of” dynamic and transient signals such as music.
+Less tolerant of overloads and voltage spikes than tubes. Except for their robust and forgiving heater filaments, it is very difficult, bordering on impossible, to blow out a tube with overvoltage; whereas, most transistors can be destroyed with as little as six volts, and every transistor can be destroyed by some voltage. Tubes are much harder to “zap.”
+Nearly all transistor power amps have directly-coupled outputs that can damage speakers, even with active protection.
+Capacitive coupling usually requires high-value electrolytic capacitors, which give audibly and measurably inferior performance at audio frequency extremes.
+Greater tendency to pick up radio frequency interference and self-oscillate to the point of self-destruction, due to rectification by low-voltage diode junctions or slew-rate effects.
+Maintenance more difficult; devices are not easily replaced by user.
+Biasing more difficult, as temperature effects and device variations complicate circuitry and degrade performance.
+Older transistors and ICs often become unavailable after only 20 years, and sometimes much less, making replacement difficult or impossible. Tubes have a staying power, proven over many decades.
+Hardly scientific or objective, but whereas transistors operate on an invisibly microscopic, quantum scale, tubes exist and operate on an intuitive, human scale. You can see the heaters lit up, you can sometimes see a glowing plasma, and you can feel and hear the warmth. Everything about tubes exists in a more human realm than hard, cold transistors. Measure away, but it’s the sound that matters.
+
+
+计算机组件及操作系统基础知识
+
+https://blog.csdn.net/sinat_31828101/article/details/50500282
+
+https://www.wepc.com/tips/how-are-motherboards-made-manufacturing/
+
+计算应用的分类及其特性
+
+http://book.51cto.com/art/201201/313547.htm
+
+https://en.wikipedia.org/wiki/Embedded_system
+
+http://cs.sru.edu/~mullins/cpsc100book/module02_introduction/module02-02_introduction.html
+
+Algorithm
+
+https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm
+
+Turing Machine
+
+https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/one.html
+
+https://blog.csdn.net/dumeichen/article/details/44194081
+
+
+什么是操作数
+
+https://blog.csdn.net/nowayings/article/details/40150623
+
+数据类型
+
+https://searchapparchitecture.techtarget.com/definition/data-type
+
+
+Addressing modes
+
+Addressing modes are a portion of the instruction set architecture in the design of the central processing unit (CPU). One aspect. Each instruction has different addressing modes, which determine the corresponding operands of machine language instructions under this architecture. Addressing mode computes the memory address of an operand through the values in registers and/or constants in machine instructions. are a portion of the instruction set architecture in the design of the central processing unit (CPU). One aspect. Each instruction has different addressing modes, which determine the corresponding operands of machine language instructions under this architecture. Addressing mode computes the memory address of an operand through the values in registers and/or constants in machine instructions.
